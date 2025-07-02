@@ -92,7 +92,6 @@ section:not(:last-of-type) {
   transform: translateY(0);
 }
 
-/* 📱 Responsive adjustments */
 @media (max-width: 600px) {
   body {
     padding: 15px;
