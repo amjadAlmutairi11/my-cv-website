@@ -1,79 +1,61 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amjad Almutairi - Resume</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* Load Gill Sans Nova (custom font) */
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src: url('assets/fonts/GillSansNova.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  <!-- Theme toggle button with sun/moon -->
-  <button id="toggle-theme" aria-label="Toggle theme">🌙</button>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --accent-color: #4e94f3;
+  --font-family: 'Gill Sans Nova', 'Gill Sans', 'Segoe UI', sans-serif;
+}
 
-  <header>
-    <h1>Amjad Fayyah Almutairi</h1>
-    <p>Computer Science Student – Qassim University</p>
-  </header>
+html[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #eeeeee;
+}
 
-  <section id="summary">
-    <h2>Summary</h2>
-    <p>A computer science student seeking a summer internship to gain hands-on experience in IT and enhance academic and technical capabilities.</p>
-  </section>
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
 
-  <section id="technical-skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Programming: Python, Java, C++, C</li>
-      <li>Database: SQL</li>
-      <li>Design: Canva, Figma</li>
-    </ul>
-  </section>
+header, section, footer {
+  margin-bottom: 40px;
+}
 
-  <section id="soft-skills">
-    <h2>Soft Skills</h2>
-    <ul>
-      <li>Leadership, teamwork, time management</li>
-      <li>Communication, presentation, adaptability</li>
-      <li>Strong desire to learn</li>
-    </ul>
-  </section>
+h1, h2 {
+  color: var(--accent-color);
+}
 
-  <section id="certificates">
-    <h2>Certificates & Courses</h2>
-    <ul>
-      <li>Coursera Deep Learning – In Progress</li>
-      <li>SideQuest AI Practical BootCamp – 2023</li>
-    </ul>
-  </section>
+ul {
+  padding-left: 20px;
+}
 
-  <section id="projects">
-    <h2>Academic Projects</h2>
-    <ul>
-      <li>UI Design Project using GUL</li>
-      <li>Database Projects</li>
-      <li>Software Engineering Projects</li>
-      <li>UI/UX Design</li>
-    </ul>
-  </section>
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
 
-  <section id="activities">
-    <h2>Activities</h2>
-    <ul>
-      <li>Member – Google Student Developers Club</li>
-      <li>Member – Computer Club</li>
-      <li>Member – Volunteer Clubs (University & College)</li>
-    </ul>
-  </section>
+#toggle-theme {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
 
-  <footer>
-    <h2>Contact</h2>
-    <p>📞 +966 50 132 0035</p>
-    <p>📧 <a href="mailto:Amjad4Imutairi@gmail.com">Amjad4Imutairi@gmail.com</a></p>
-    <p>📍 Qassim, Buraidah</p>
-    <p><a href="https://github.com/amjadalmutairi11" target="_blank">🔗 My GitHub</a></p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+#toggle-theme:hover {
+  transform: rotate(20deg);
+}
