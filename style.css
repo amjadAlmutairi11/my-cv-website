@@ -27,7 +27,9 @@ body {
 
 header, section, footer {
   margin-bottom: 40px;
-  padding: 10px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2 {
@@ -54,6 +56,7 @@ ul {
 a {
   color: var(--accent-color);
   text-decoration: none;
+  word-break: break-word;
 }
 
 #toggle-theme {
@@ -72,35 +75,12 @@ a {
   transform: rotate(20deg);
 }
 
-/* Download CV button */
-.download-section {
-  margin-top: 20px;
-}
-
-.download-btn {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 16px;
-  display: inline-block;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.download-btn:hover {
-  background-color: #2e6ddb;
-  transform: scale(1.05);
-}
-
-/* Section separator */
 section:not(:last-of-type) {
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
 
-/* Scroll animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -110,4 +90,35 @@ section:not(:last-of-type) {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  ul {
+    padding-left: 16px;
+  }
+
+  #toggle-theme {
+    font-size: 22px;
+    top: 12px;
+    right: 12px;
+  }
+
+  footer {
+    font-size: 14px;
+    text-align: center;
+  }
 }
