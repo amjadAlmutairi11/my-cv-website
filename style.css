@@ -1,0 +1,44 @@
+/* Theme variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --accent-color: #4e94f3;
+  --font-family: 'Roboto', sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #eeeeee;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: var(--accent-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+section, header, footer {
+  margin-bottom: 40px;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
