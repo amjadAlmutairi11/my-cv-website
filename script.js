@@ -1,5 +1,9 @@
-// Toggle between light and dark themes
 const toggleBtn = document.getElementById("toggle-theme");
-toggleBtn.addEventListener("click", () => {
-  document.documentElement.toggleAttribute("data-theme");
-});
+
+function setThemeIcon() {
+  const isDark = document.documentElement.hasAttribute("data-theme");
+  toggleBtn.textContent = isDark ? "🌞" : "🌙";
+}
+
+// Toggle theme and icon
+toggleBtn.addEvent
