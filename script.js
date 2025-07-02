@@ -1,3 +1,4 @@
+// 🌙 Theme toggle logic
 const toggleBtn = document.getElementById("toggle-theme");
 
 function setThemeIcon() {
@@ -15,6 +16,7 @@ toggleBtn.addEventListener("click", () => {
   setThemeIcon();
 });
 
+// ✨ Fade-in on scroll
 function handleScrollAnimation() {
   const elements = document.querySelectorAll('.fade-in');
   elements.forEach(el => {
