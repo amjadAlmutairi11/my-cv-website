@@ -1,9 +1,6 @@
-/* Load custom font */
 @font-face {
   font-family: 'Gill Sans Nova';
   src: url('assets/fonts/GillSansNova.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
 }
 
 :root {
@@ -25,14 +22,29 @@ body {
   color: var(--text-color);
   font-family: var(--font-family);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header, section, footer {
   margin-bottom: 40px;
+  padding: 10px 0;
 }
 
 h1, h2 {
   color: var(--accent-color);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40%;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 ul {
@@ -58,4 +70,44 @@ a {
 
 #toggle-theme:hover {
   transform: rotate(20deg);
+}
+
+/* Download CV button */
+.download-section {
+  margin-top: 20px;
+}
+
+.download-btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #2e6ddb;
+  transform: scale(1.05);
+}
+
+/* Section separator */
+section:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+/* Scroll animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
