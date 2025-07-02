@@ -1,13 +1,10 @@
-// Get theme toggle button
 const toggleBtn = document.getElementById("toggle-theme");
 
-// Set theme icon
 function setThemeIcon() {
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
   toggleBtn.textContent = isDark ? "🌞" : "🌙";
 }
 
-// Toggle theme
 toggleBtn.addEventListener("click", () => {
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
   if (isDark) {
@@ -18,7 +15,6 @@ toggleBtn.addEventListener("click", () => {
   setThemeIcon();
 });
 
-// Animate on scroll
 function handleScrollAnimation() {
   const elements = document.querySelectorAll('.fade-in');
   elements.forEach(el => {
