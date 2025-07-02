@@ -1,3 +1,4 @@
+/* Load custom font */
 @font-face {
   font-family: 'Gill Sans Nova';
   src: url('assets/fonts/GillSansNova.woff2') format('woff2');
@@ -12,8 +13,8 @@
   --font-family: 'Gill Sans Nova', 'Gill Sans', 'Segoe UI', sans-serif;
 }
 
-[data-theme="dark"] {
-  --bg-color: #1e1e1e;
+html[data-theme="dark"] {
+  --bg-color: #1a1a1a;
   --text-color: #eeeeee;
 }
 
@@ -52,6 +53,7 @@ a {
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
+  z-index: 100;
 }
 
 #toggle-theme:hover {
