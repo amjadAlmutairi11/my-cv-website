@@ -1,7 +1,7 @@
-// Get theme toggle button
+// Get toggle button
 const toggleBtn = document.getElementById("toggle-theme");
 
-// Set icon based on current theme
+// Set theme icon
 function setThemeIcon() {
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
   toggleBtn.textContent = isDark ? "🌞" : "🌙";
@@ -18,5 +18,5 @@ toggleBtn.addEventListener("click", () => {
   setThemeIcon();
 });
 
-// Update icon on page load
+// Set initial icon on load
 document.addEventListener("DOMContentLoaded", setThemeIcon);
